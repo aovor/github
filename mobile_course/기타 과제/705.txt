@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="pageone">
+            <div data-role="header">
+                <h1>전환 효과의 종류</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <p>전환 효과를 보기 위하여 이 링크를 클릭하세요.</p>
+                <a href="#pagetwo" data-transition="fade">페이지 2로 fade</a><br/>
+                    <a href="#pagetwo" data-transition="flip">페이지 2로 flip</a><br/>
+                    <a href="#pagetwo" data-transition="flow">페이지 2로 flow</a><br/>
+                    <a href="#pagetwo" data-transition="pop">페이지 2로 pop</a><br/>
+                    <a href="#pagetwo" data-transition="slide">페이지 2로 slide</a><br/>
+                    <a href="#pagetwo" data-transition="slidefade">페이지 2로 slidefade</a><br/>
+                    <a href="#pagetwo" data-transition="slideup">페이지 2로 slideup</a><br/>
+                    <a href="#pagetwo" data-transition="slidedown">페이지 2로 slidedown</a><br/>
+                    <a href="#pagetwo" data-transition="turn">페이지 2로 turn</a><br/>
+                    <a href="#pagetwo" data-transition="none">페이지 2로 간다(전환 효과 없음)</a><br/>
+            </div>
+            <div data-role="footer">
+                <h1>ISA Lab.</h1>
+            </div>
+        </div>
+        <div data-role="page" id="pagetwo">
+            <div data-role="header">
+                <h1>페이지 2</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <p>돌아가기 위하여 이 링크를 클릭하세요.</p>
+                <a href="#pageone">페이지 1로 간다.</a>
+            </div>
+            <div data-role="footer">
+                <h1>ISA Lab.</h1>
+            </div>
+        </div>
+    </body>
+</html>

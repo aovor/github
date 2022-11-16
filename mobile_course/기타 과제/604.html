@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <script type="text/javascript">
+            var db;
+            try{
+                db=openDatabase('mydb', '1.0', 'Test DB', 2*1024*1024);
+            }catch(err){
+                document.write("브라우저가 WEB SQL을 지원하지 않습니다.");
+            }
+            function checkBrowser(){
+                if(!db){
+                    document.getElementById('content').innerHTML="";
+                }
+            }
+            function insertToDb(){
+                var id=document.getElementById("id").value;
+                var message=document.getElementById("message").value;
+                db.transaction(function(tx){
+                    var table=document.getElementById("table").value;
+                    tx.executeSql('INSERT INTO'+table+'(id,message) VALUES (?,?)', [id,message]);
+                });
+                displayDbContents();
+            }
+            function deleteRow(id){
+                db.transaction(function(tx){
+                    var table=document.getElementById('table').value;
+                    tx.executeSql('DELETE FROM '+table+' WHERE id=?', [id]);
+                    displayDbContents();
+                });
+            }
+            function displayDbContents(){
+                db.transaction(function(tx){
+                    var table=document.getElementById("table").value;
+                    tx.executeSql('SELECT * FROM '+table,[],function(tx,results){
+                        var i,len=results.rows.length;
+                        var buffer="<table border='1px'><tr><th>ID</th><th>메시지</th><th>삭제</th></tr>";
+                        for(i=0;i<len;i++){
+                            buffer=buffer+"<tr><td>"+results.rows.item(i).id+"</td><td>"+results.rows.item(i).message+"</td><td><input id="+results.rows.item(i).id+" type='button' value='삭제' onclick='deleteRow(this.id)'/></td></tr>";
+                        }
+                        buffer=buffer+"</table>";
+                        document.getElementById('result').innerHTML=buffer;
+                    });
+                });
+            }
+             function createTable(){
+                document.getElementById('table').disabled=true;
+                document.getElementById('createid').disabled=true;
+                db.transaction(function (tx) {
+                    var table=document.getElementById('table').value;
+                    tx.executeSql('CREATE TABLE IF NOT EXISTS '+table+' (id unique, message)');
+                    alert("Table created with 2 columns(id, message)");
+                    document.getElementById('id').disabled=false;
+                    document.getElementById('message').disabled=false;
+                    document.getElementById('submit').disabled=false;
+                    displayDbContents();
+                    document.getElementById('drop').disabled=false;
+                });
+            }
+            function dropTable(){
+                db.transaction(function(tx){
+                    var table=document.getElementById('table').value;
+                    tx.executeSql('DROP TABLE ' +table,[]);
+                    clearAll();
+                    document.getElementById('result').innerHTML="";
+                });
+            }
+            function clearAll(){
+                document.getElementById('table').disabled=false;
+                document.getElementById('table').value="";
+                document.getElementById('createid').disabled=false;
+                document.getElementById('id').disabled=true;
+                document.getElementById('id').value="";
+                document.getElementById('message').disabled=true;
+                document.getElementById('message').value="";
+                document.getElementById('submit').disabled=true;
+            }
+        </script>
+    </head>
+    <body onload="checkBrowser()">
+        <div id="content">
+            <table width="100%" border="1px">
+                <tr><td align="center">데이터 생성과 삽입</td><td align="center">테이블 내용</td></tr>
+                <tr>
+                    <td width="50%" align="center">
+                        <table>
+                            <tr><td>테이블 생성</td><td><input type="text" id="table" placeholder="테이블 이름 입력"/><input type="button" id="createid" value="테이블 생성" onclick="createTable()"/></td></tr>
+                            <tr><td>아이디</td><td><input type="text" id="id" placeholder="아이디 입력" disabled/></td></tr>
+                            <tr><td>메시지</td><td><input type="text" id="message" placeholder="메시지 입력" disabled/></td></tr>
+                            <tr><td><input type="button" value="제출" id="submit" onclick="insertToDb()" disabled/></td><td></td></tr>
+                        </table>
+                    </td>
+                    <td width="50%" align="center">
+                        <div id="result">
+                    </div>
+                    <input type="button" value="테이블 삭제" onclick="dropTable()" id="drop" disabled/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylecss.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>오혜승의 포트폴리오</title>
+    </head>
+    <body>
+        <div class="header">
+        <h1>오혜승의 포트폴리오</h1>
+        </div>
+        <div class="table1">
+            <table border="1" align="right">
+                <th><a href="file:///C:/Users/82109/Desktop/univ/mobile406/1.html">소개</a></th>
+                <th><a href="file:///C:/Users/82109/Desktop/univ/mobile406/2.html">인적</a></th>
+                <th><a href="file:///C:/Users/82109/Desktop/univ/mobile406/3.html">학술</a></th>
+                <th><a href="file:///C:/Users/82109/Desktop/univ/mobile406/4.html">경력</a></th>
+            </table>
+        </div>
+        <div class="h3">
+            <h3>프로젝트</h3>
+            <ul>
+                <li>레고 NXT 실습</li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2o7iteBPxMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </ul>
+            <h3>자격증</h3>
+            <ul>
+                <li>정보처리기사 1급</li>
+                <li>DAP 자격증</li>
+            </ul>
+        
+            <h3>수상</h3>
+            <ul>
+                <li>교내 소프트웨어공모전 금상</li>
+                <li>포트폴리오 경진대회 장려상</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Copyright (c) 2020 Oh, HyeSeung</p>
+        </div>
+    </body>
+</html>

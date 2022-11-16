@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="uft-8">
+        <title>jQuery 모바일 응용</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+    </head>
+    <body>
+        <!-- 첫 번째 페이지 시작 -->
+        <section id="page1" data-role="page">
+            <header data-role="header"><h1>jQuery 모바일</h1></header>
+            <div data-role="content" class="content">
+                <p>첫 번째 페이지!</p>
+                <p><a href="#page2" data-rel="dialog">두 번째 페이지로...</a></p>
+            </div>
+            <footer data-role = "footer"><h1>ISA LAb.</h1></footer>
+        </section>
+        <!-- 첫 번째 페이지 끝-->
+        <!-- 두 번째 페이지 시작-->
+        <section id="page2" data-role="page">
+            <header data-role="header"><h1>jQuery 모바일</h1></header>
+            <div data-role="content" class="content">
+                <p>두 번째 페이지!</p>
+                <p><a href="#page3"> 세 번째 페이지로...</a></p>
+            </div>
+            <footer data-role = "footer"><h1>ISA LAb.</h1></footer>
+        </section>
+        <!-- 두 번째 페이지 끝-->
+        <!--세 번째 페이지 시작-->
+        <section id="page3" data-role="page">
+            <header data-role="header"><h1>jQuery 모바일</h1></header>
+            <div data-role="content" class="content">
+                <p>세 번째 페이지!</p>
+                <p><a href="#page1"> 첫 번째 페이지로...</a></p>
+            </div>
+            <footer data-role = "footer"><h1>ISA LAb.</h1></footer>
+        </section>
+        <!-- 세 번째 페이지 끝-->
+    </body>
+</html>

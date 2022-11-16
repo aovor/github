@@ -1,0 +1,346 @@
+a {
+	text-decoration: none;
+	color: white;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #993333;
+	padding: 8px 12px;
+}
+
+.navbar_logo{
+	font-size: 24px;
+	color: white;
+}
+
+.navbar_logo i {
+	color: #ff9999;
+}
+
+.navbar_menu {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar_menu li:hover {
+	background-color: #ff9999;
+	border-radius: 4px;
+	transition: all ease 0.3s;
+}
+
+.navbar_menu li {
+	padding: 8px 20px;
+}
+
+.navbar_icons {
+	list-style: none;
+	color: white;
+	display: flex;
+	padding-left: 0;
+}
+
+.navbar_icons li {
+	padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+	display: none;
+	position: absolute;
+	right: 32px;
+	color: #ff9999;
+}
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@media screen and (min-width: 1025px){
+	body{
+		background-color: #b17474;
+
+		font-family: 'CookieRun-Regular';
+		font-size: 20px;
+
+		margin: 0rem;
+	    padding: 0rem;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+	}
+
+	p {
+		display: none;
+	}
+
+	.png {
+		position: absolute;
+		top: 78%;
+		left: 45%;
+	}
+
+	#youtube1 {
+		position: absolute;
+		top: 15%;
+		left: 2%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube2 {
+		position: absolute;
+		top: 15%;
+		left: 35%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube3 {
+		position: absolute;
+		top: 15%;
+		left: 68%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube4 {
+		position: absolute;
+		top: 45%;
+		left: 2%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube5 {
+		position: absolute;
+		top: 45%;
+		left: 35%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube6 {
+		position: absolute;
+		top: 45%;
+		left: 68%;
+		width: 30%;
+		height: 25%;
+	}
+
+	.footer {
+		background-color: #993333;
+		width: 100%;
+		position: absolute;
+		bottom: 0%;
+	}
+	#footer1{
+		text-align: center;
+		color: white;
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px){
+	body{
+		background-color: #b17474;
+
+		font-family: 'CookieRun-Regular';
+		font-size: 20px;
+
+		margin: 0rem;
+	    padding: 0rem;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+	}
+
+	.png {
+		position: absolute;
+		top: 78%;
+		left: 45%;
+	}
+
+	p {
+		display: none;
+	}
+
+	#youtube1 {
+		position: absolute;
+		top: 15%;
+		left: 2%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube2 {
+		position: absolute;
+		top: 15%;
+		left: 35%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube3 {
+		position: absolute;
+		top: 15%;
+		left: 68%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube4 {
+		position: absolute;
+		top: 45%;
+		left: 2%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube5 {
+		position: absolute;
+		top: 45%;
+		left: 35%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube6 {
+		position: absolute;
+		top: 45%;
+		left: 68%;
+		width: 30%;
+		height: 25%;
+	}
+
+	.footer {
+		background-color: #993333;
+		width: 100%;
+		position: absolute;
+		bottom: 0%;
+	}
+	#footer1{
+		text-align: center;
+		color: white;
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	body{
+		background-color: #b17474;
+
+		font-family: 'CookieRun-Regular';
+		font-size: 20px;
+
+		margin: 0rem;
+	    padding: 0rem;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+	}
+
+	p {
+		color: white;
+		font-size: 30px;
+		position: absolute;
+		top: 15%;
+		left: 12%;
+		z-index: -5;
+	}
+	.png {
+		position: absolute;
+		top: 33%;
+		left: 30%;
+		z-index: -5;
+	}
+
+	#youtube1 {
+		position: absolute;
+		top: 85%;
+		left: 2%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube2 {
+		position: absolute;
+		top: 85%;
+		left: 35%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube3 {
+		position: absolute;
+		top: 85%;
+		left: 68%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube4 {
+		position: absolute;
+		top: 55%;
+		left: 2%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube5 {
+		position: absolute;
+		top: 55%;
+		left: 35%;
+		width: 30%;
+		height: 25%;
+	}
+	#youtube6 {
+		position: absolute;
+		top: 55%;
+		left: 68%;
+		width: 30%;
+		height: 25%;
+	}
+
+	.footer {
+		background-color: #993333;
+		width: 100%;
+		position: absolute;
+		top: 120%;
+	}
+	#footer1{
+		text-align: center;
+		color: white;
+		font-size: 10px;
+	}
+
+
+
+.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 8px 24x;
+	}
+
+	.navbar_menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 30px 30x;
+	}
+	
+	.navbar_menu li {
+		width: 100%;
+		text-align: center;
+		height: 100%;
+		padding: 30px 30x;
+	}
+
+	.navbar_icons {
+		display: none;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.navbar_toogleBtn {
+		display: block;
+	}
+
+	.navbar_menu.active,
+	.navbar_icons.active {
+		display: flex;
+	}
+}
+

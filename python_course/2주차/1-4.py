@@ -1,0 +1,5 @@
+print("당신의 이름은 무엇인가요?", end = "")
+name = input("당신의 이름은 무엇입니까? ")
+print("나이는 몇 살인가요? ", end = "")
+age = int(input("나이는 몇 살인가요? "))
+print(name, "님의 나이는 ", age, "살입니다.", sep = "")
